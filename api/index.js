@@ -44,7 +44,7 @@ function serverIsGestart() {
 }
 
 // -----------------------
-// functies die API requests afhandelen
+// functies die API requests afhandelen (opslaan)
 // -----------------------
 
 // stuurt de variabelen uit het request
