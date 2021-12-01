@@ -21,28 +21,19 @@ CREATE TABLE products (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price) values ('Ketting', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+insert into products (name, description, code, price) values ('nette schoenen', 'Dit is een exclusief paar schoenen gedragen door Hugo de Jonge, deze schoen is gepersonaliseerd en er is 
+maar 1 exemplaar van. Hugo is overigens niet inbegrepen bij dit product.', '816905633-0', 999);
 
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.
+insert into products (name, description, code, price) values ('klompen', 'Puur oudhollandse klompen gemaakt van hout', '077030122-3', 11);
 
-In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', '816905633-0', 10.5);
-insert into products (name, description, code, price) values ('Armband', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+insert into products (name, description, code, price) values ('cars crocs', 'Dit zijn exclusieve Cars crocs. Met deze crocs ren je twee keer zo snel. ktjauw!.', '445924201-X', 13.5);
 
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
 
-Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.', '077030122-3', 11);
-insert into products (name, description, code, price) values ('Ring', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.
+insert into products (name, description, code, price) values ('Jordan 1 High J-Balvin', 'Dit zijn de welbekende Jordan 1s, deze schoenen zijn ontworpen door de bekende zanger J-Balvin. Er zijn hier maar 4 exemplaren van.', '693155505-7', 13.5);
+insert into products (name, description, code, price) values ('gouden schoenen', 'Nu al een klassieker, gedragen door de bekende worstelaar John Cena', '686928463-6', 14);
+insert into products (name, description, code, price) values ('zeeman schoenen', 'Dit zijn exclusieve schoenen van de Zeeman. Met deze schoenen ga je in zee man', '492662523-7', 14);
 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+insert into products (name, description, code, price) values ('Balenciaga schoen', 'Deze schoen is speciaal voor mensen die iets tegen sokken hebben.', '492662524-7', 14);
 
-Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', '445924201-X', 13.5);
-insert into products (name, description, code, price) values ('Aquí llega Condemor, el pecador de la pradera', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
-
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.
-
-Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', '693155505-7', 13.5);
-insert into products (name, description, code, price) values ('Kiss for Corliss, A (Almost a Bride)', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14);
-insert into products (name, description, code, price) values ('Velvet Goldmine', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 14);
+insert into products (name, description, code, price) values ('coc(clash of clans) schoenen', 'Met deze schoen ben je de bom. Net als die ene die uit de ballon valt.', '492662525-7', 14);
 
