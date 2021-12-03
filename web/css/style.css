@@ -3,6 +3,7 @@
 footer {
   margin: 20px;
   font-size: 12px;
+  font-family: fantasy;
 } 
 
 .toast {
@@ -11,25 +12,30 @@ footer {
     top: 50px; 
     right: 0; 
     z-index:0;
+    font-family: fantasy;
 }
 
 .shop-button {
   font-size: 15px;
   margin-top: -4px;
+  font-family: fantasy;
 }
 
 .article-container {
   margin: auto;
+  font-family: fantasy;
 }
 
 .card {
   width:200px; 
   height: 700px; 
   margin-bottom: 20px
+  font-family: fantasy;
 }
 
 .card-header {
   height: 5em;
+  font-family: fantasy;
 }
 
 .card-text {
@@ -42,20 +48,24 @@ footer {
   height: inherit; 
   margin-bottom: 20px;
   margin-top: 20px;
+  font-family: fantasy;
 }
 
 .product img {
   margin: auto;
   margin-top: 20px;
+  font-family: fantasy;
 }
 
 .product > .card-header {
   height:3em
+  font-family: fantasy;
 }
 
 .product-properties > li > .property-name {
   display: inline-block;
   width: 50px;
+  font-family: fantasy;
 }
 .product_amount {
   width: 80px
