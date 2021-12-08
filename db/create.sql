@@ -12,6 +12,9 @@ CREATE TABLE products (
 );
 
 
+
+
+
 --
 -- populate with data
 --
@@ -33,7 +36,7 @@ insert into products (name, description, code, price) values ('Jordan 1 High J-B
 insert into products (name, description, code, price) values ('Gouden schoenen', 'Nu al een klassieker, gedragen door de bekende worstelaar John Cena', '686928463-6', 14);
 insert into products (name, description, code, price) values ('Zeeman schoenen', 'Dit zijn exclusieve schoenen van de Zeeman. Met deze schoenen ga je in zee man', '492662523-7', 14);
 
-insert into products (name, description, code, price) values ('Balenciaga schoen', 'Deze schoen is speciaal voor mensen die iets tegen sokken hebben.', '492662524-7', 14);
+insert into products (name, description, code, price) values ('Balenciaga schoen', 'Deze schoen is speciaal voor mensen die iets tegen sokken hebben.', '492662524-7', 645);
 
 insert into products (name, description, code, price) values ('Coc(clash of clans) schoenen', 'Met deze schoen ben je de bom. Net als die ene die uit de ballon valt.', '492662525-7', 14);
 
