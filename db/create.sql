@@ -47,14 +47,14 @@ CREATE TABLE product_colour (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, brand_id, model_id) values ('de Hugos', 'Dit is een exclusief paar schoenen gedragen door Hugo de Jonge, deze schoen is gepersonaliseerd en er is maar 1 exemplaar van. Hugo is overigens niet inbegrepen bij dit product.', 999, 1, 1);
+insert into products (name, description, code, price, brand_id, model_id) values ('de Hugos', 'Dit is een exclusief paar schoenen gedragen door Hugo de Jonge, deze schoen is gepersonaliseerd en er is maar 1 exemplaar van. Hugo is overigens niet inbegrepen bij dit product.', '077030122-1', 999, 1, 1);
 insert into products (name, description, code, price, brand_id, model_id) values ('Klompen', 'Puur oudhollandse klompen gemaakt van hout', '077030122-3', 11, 7, 4);
 insert into products (name, description, code, price, brand_id, model_id) values ('Cars crocs', 'Dit zijn exclusieve Cars crocs. Met deze crocs ren je twee keer zo snel. ktjauw!.', '445924201-X', 13.5, 3, 3);
 insert into products (name, description, code, price, brand_id, model_id) values ('Jordan 1 High J-Balvin', 'Dit zijn de welbekende Jordan 1s, deze schoenen zijn ontworpen door de bekende zanger J-Balvin. Er zijn hier maar 4 exemplaren van.', '693155505-7', 13.5, 5, 2);
 insert into products (name, description, code, price, brand_id, model_id) values ('you cant see me', 'Nu al een klassieker, gedragen door de bekende worstelaar John Cena', '686928463-6', 14, 1, 1);
 insert into products (name, description, code, price, brand_id, model_id) values ('Zeeman schoenen', 'Dit zijn exclusieve schoenen van de Zeeman. Met deze schoenen ga je in zee man', '492662523-7', 14, 6, 1);
 insert into products (name, description, code, price, brand_id, model_id) values ('Balenciaga schoen', 'Deze schoen is speciaal voor mensen die iets tegen sokken hebben.', '492662524-7', 645, 2, 1);
-insert into products (name, description, code, price, brand_id, model_id) values ('Coc(clash of clans) schoenen', 'Met deze schoen ben je de bom. Net als die ene die uit de ballon valt.', '492662525-7', 4, 1);
+insert into products (name, description, code, price, brand_id, model_id) values ('Coc(clash of clans) schoenen', 'Met deze schoen ben je de bom. Net als die ene die uit de ballon valt.', '492662525-7', 15, 4, 1);
 
 insert into brand (name) values ('Pier One');
 insert into brand (name) values ('Balenciaga');
