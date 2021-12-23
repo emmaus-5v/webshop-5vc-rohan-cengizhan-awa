@@ -28,7 +28,7 @@ CREATE TABLE colour (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(255)
 );
-
+//dfsvsg//
 DROP TABLE IF EXISTS products_colour; 
 CREATE TABLE products_colour (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
