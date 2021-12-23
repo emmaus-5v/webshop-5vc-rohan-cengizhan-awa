@@ -12,8 +12,29 @@ CREATE TABLE products (
 );
 
 
+DROP TABLE IF EXISTS products; 
+CREATE TABLE products (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  code VARCHAR(15),
+  name VARCHAR(255),
+  description TEXT,
+  price NUMERIC(10, 2),
+  model_id INTEGER,
+  brand_id NUMERIC(10, 2)INTEGER
+);
 
+DROP TABLE IF EXISTS colour; 
+CREATE TABLE colour (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(255)
+);
 
+DROP TABLE IF EXISTS products_colour; 
+CREATE TABLE products_colour (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  colour_id VARCHAR(255),
+  producten_id VARCHAR(255)
+);
 
 --
 -- populate with data
