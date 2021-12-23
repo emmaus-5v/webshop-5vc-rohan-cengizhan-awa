@@ -8,19 +8,21 @@ CREATE TABLE products (
   code VARCHAR(15),
   name VARCHAR(255),
   description TEXT,
-  price NUMERIC(10, 2)
-);
-
-
-DROP TABLE IF EXISTS products; 
-CREATE TABLE products (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  code VARCHAR(15),
-  name VARCHAR(255),
-  description TEXT,
   price NUMERIC(10, 2),
   model_id INTEGER,
-  brand_id NUMERIC(10, 2)INTEGER
+  brand_id INTEGER
+);
+
+DROP TABLE IF EXISTS brand; 
+CREATE TABLE brand (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS model; 
+CREATE TABLE model (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS colour; 
@@ -28,12 +30,12 @@ CREATE TABLE colour (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR(255)
 );
-//dfsvsg//
-DROP TABLE IF EXISTS products_colour; 
-CREATE TABLE products_colour (
+
+DROP TABLE IF EXISTS product_colour; 
+CREATE TABLE product_colour (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  colour_id VARCHAR(255),
-  producten_id VARCHAR(255)
+  colour_id INTEGER,
+  products_id INTEGER
 );
 
 --
@@ -45,19 +47,45 @@ CREATE TABLE products_colour (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price) values ('Nette schoenen', 'Dit is een exclusief paar schoenen gedragen door Hugo de Jonge, deze schoen is gepersonaliseerd en er is 
-maar 1 exemplaar van. Hugo is overigens niet inbegrepen bij dit product.', '816905633-0', 999);
+insert into products (name, description, code, price, brand_id, model_id) values ('de Hugos', 'Dit is een exclusief paar schoenen gedragen door Hugo de Jonge, deze schoen is gepersonaliseerd en er is maar 1 exemplaar van. Hugo is overigens niet inbegrepen bij dit product.', 999, 1, 1);
+insert into products (name, description, code, price, brand_id, model_id) values ('Klompen', 'Puur oudhollandse klompen gemaakt van hout', '077030122-3', 11, 7, 4);
+insert into products (name, description, code, price, brand_id, model_id) values ('Cars crocs', 'Dit zijn exclusieve Cars crocs. Met deze crocs ren je twee keer zo snel. ktjauw!.', '445924201-X', 13.5, 3, 3);
+insert into products (name, description, code, price, brand_id, model_id) values ('Jordan 1 High J-Balvin', 'Dit zijn de welbekende Jordan 1s, deze schoenen zijn ontworpen door de bekende zanger J-Balvin. Er zijn hier maar 4 exemplaren van.', '693155505-7', 13.5, 5, 2);
+insert into products (name, description, code, price, brand_id, model_id) values ('you cant see me', 'Nu al een klassieker, gedragen door de bekende worstelaar John Cena', '686928463-6', 14, 1, 1);
+insert into products (name, description, code, price, brand_id, model_id) values ('Zeeman schoenen', 'Dit zijn exclusieve schoenen van de Zeeman. Met deze schoenen ga je in zee man', '492662523-7', 14, 6, 1);
+insert into products (name, description, code, price, brand_id, model_id) values ('Balenciaga schoen', 'Deze schoen is speciaal voor mensen die iets tegen sokken hebben.', '492662524-7', 645, 2, 1);
+insert into products (name, description, code, price, brand_id, model_id) values ('Coc(clash of clans) schoenen', 'Met deze schoen ben je de bom. Net als die ene die uit de ballon valt.', '492662525-7', 4, 1);
 
-insert into products (name, description, code, price) values ('Klompen', 'Puur oudhollandse klompen gemaakt van hout', '077030122-3', 11);
+insert into brand (name) values ('Pier One');
+insert into brand (name) values ('Balenciaga');
+insert into brand (name) values ('Crocs');
+insert into brand (name) values ('SUPERCELL');
+insert into brand (name) values ('Nike');
+insert into brand (name) values ('Zeeman');
+insert into brand (name) values ('Schoenemeloen');
 
-insert into products (name, description, code, price) values ('Cars crocs', 'Dit zijn exclusieve Cars crocs. Met deze crocs ren je twee keer zo snel. ktjauw!.', '445924201-X', 13.5);
+insert into model (name) values ('nette schoenen');
+insert into model (name) values ('alledaags');
+insert into model (name) values ('sportschoenen');
+insert into model (name) values ('houtwerk');
 
+insert into colour (name) values ('zwart');
+insert into colour (name) values ('rood');
+insert into colour (name) values ('blauw');
+insert into colour (name) values ('geel');
+insert into colour (name) values ('wit');
+insert into colour (name) values ('goud');
+insert into colour (name) values ('meerderkleurig');
 
-insert into products (name, description, code, price) values ('Jordan 1 High J-Balvin', 'Dit zijn de welbekende Jordan 1s, deze schoenen zijn ontworpen door de bekende zanger J-Balvin. Er zijn hier maar 4 exemplaren van.', '693155505-7', 13.5);
-insert into products (name, description, code, price) values ('Gouden schoenen', 'Nu al een klassieker, gedragen door de bekende worstelaar John Cena', '686928463-6', 14);
-insert into products (name, description, code, price) values ('Zeeman schoenen', 'Dit zijn exclusieve schoenen van de Zeeman. Met deze schoenen ga je in zee man', '492662523-7', 14);
-
-insert into products (name, description, code, price) values ('Balenciaga schoen', 'Deze schoen is speciaal voor mensen die iets tegen sokken hebben.', '492662524-7', 645);
-
-insert into products (name, description, code, price) values ('Coc(clash of clans) schoenen', 'Met deze schoen ben je de bom. Net als die ene die uit de ballon valt.', '492662525-7', 14);
-
+insert into product_colour (products_id, colour_id) values (1, 5);
+insert into product_colour (products_id, colour_id) values (1, 7);
+insert into product_colour (products_id, colour_id) values (2, 4);
+insert into product_colour (products_id, colour_id) values (3, 2);
+insert into product_colour (products_id, colour_id) values (4, 7);
+insert into product_colour (products_id, colour_id) values (5, 6);
+insert into product_colour (products_id, colour_id) values (6, 1);
+insert into product_colour (products_id, colour_id) values (6, 3);
+insert into product_colour (products_id, colour_id) values (6, 4);
+insert into product_colour (products_id, colour_id) values (6, 1);
+insert into product_colour (products_id, colour_id) values (7, 4);
+insert into product_colour (products_id, colour_id) values (7, 5);
