@@ -57,7 +57,7 @@ function echoRequest(request, response) {
 function getCategories(request, response) {
   console.log('API ontvangt /api/categories/')
   // TODO: change query to make it return categories
-  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_id2, brand.name AS brand_name, model.id AS model_id2, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id ORDER BY name ASC')
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_identity, brand.name AS brand_name, model.id AS model_identity, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id ORDER BY name ASC')
   const data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
@@ -73,12 +73,16 @@ function getProducts(request, response) {
   const category_id = parseInt(request.query.category)
   let data = []
   if (category_id > 0) {
-    const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_id2, brand.name AS brand_name, model.id AS model_id2, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_identity, brand.name AS brand_name, model.id AS model_identity, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id ORDER BY name ASC')
     data = sqlOpdracht.all(category_id)
   } else {
-    const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_id2, brand.name AS brand_name, model.id AS model_id2, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_identity, brand.name AS brand_name, model.id AS model_identity, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id ORDER BY name ASC')
     data = sqlOpdracht.all()
   }
+
+// met deze query konden wij wel de kleuren(n:m-relatie) zien van de producten maar er ontstond steeds een nieuwe kolom dus dat lukte uiteindelijk niet; SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_id2, brand.name AS brand_name, model.id AS model_id2, model.name AS model_name, colour.id AS colour_id2, colour.name AS colour_name, product_colour.id AS product_colour_id, product_colour.colour_id AS product_colour_colour_id, product_colour.colour_id AS product_colour_colour_id FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id JOIN product_colour ON product_colour.products_id = products.id JOIN colour ON product_colour.colour_id = colour.id ORDER BY name ASC;  //
+
+
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
   console.log('API verstuurt /api/products/')

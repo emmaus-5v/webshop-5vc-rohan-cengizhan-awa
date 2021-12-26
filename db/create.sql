@@ -91,5 +91,4 @@ insert into product_colour (products_id, colour_id) values (6, 1);
 insert into product_colour (products_id, colour_id) values (6, 3);
 insert into product_colour (products_id, colour_id) values (6, 4);
 insert into product_colour (products_id, colour_id) values (6, 1);
-insert into product_colour (products_id, colour_id) values (7, 4);
-insert into product_colour (products_id, colour_id) values (7, 5);
+insert into product_colour (products_id, colour_id) values (7, 1);
