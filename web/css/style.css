@@ -23,14 +23,15 @@ footer {
 }
 
 .card {
+  background-color: rgb(201, 211, 211);
   width:200px; 
   height: 700px; 
   margin-bottom: 20px
-  background-color: rgb(111, 124, 124);
 }
 
 .card-header {
   height: 5em;
+  background-color: rgba(111, 124, 124, 0.37);
 }
 
 .card-text {
@@ -74,11 +75,6 @@ footer {
   width: 25%;
   float: left;
 }
-
-nav {
-  background-color: rgb(55, 135, 182);
-}
-
 
 body {
 /* {background-image: url('/images/background.jpg');} */
