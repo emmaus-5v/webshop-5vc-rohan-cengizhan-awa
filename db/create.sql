@@ -34,8 +34,8 @@ CREATE TABLE colour (
 DROP TABLE IF EXISTS product_colour; 
 CREATE TABLE product_colour (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  colour_id INTEGER,
-  products_id INTEGER
+  products_id INTEGER,
+  colour_id INTEGER
 );
 
 --
@@ -62,11 +62,11 @@ insert into brand (name) values ('Crocs');
 insert into brand (name) values ('SUPERCELL');
 insert into brand (name) values ('Nike');
 insert into brand (name) values ('Zeeman');
-insert into brand (name) values ('Schoenemeloen');
+insert into brand (name) values ('Meloen');
 
-insert into model (name) values ('nette schoenen');
+insert into model (name) values ('nette schoen');
 insert into model (name) values ('alledaags');
-insert into model (name) values ('sportschoenen');
+insert into model (name) values ('sportschoen');
 insert into model (name) values ('houtwerk');
 
 insert into colour (name) values ('zwart');
