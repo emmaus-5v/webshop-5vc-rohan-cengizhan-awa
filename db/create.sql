@@ -69,6 +69,10 @@ insert into model (name) values ('alledaags');
 insert into model (name) values ('sportschoen');
 insert into model (name) values ('houtwerk');
 
+
+/* n:m relatie tussen kleuren en de schoenen */
+
+
 insert into colour (name) values ('zwart');
 insert into colour (name) values ('rood');
 insert into colour (name) values ('blauw');

@@ -64,6 +64,9 @@ function getCategories(request, response) {
   console.log('API verstuurt /api/categories/')
 }
 
+/* query zonder de n:m relatie die we niet werkend konden krijgen */
+
+
 function getProducts(request, response) {
   console.log('API ontvangt /api/products/?', request.query)
 
@@ -91,7 +94,7 @@ function getProductById(request, response) {
   response.status(200).json(data[0])
 }
 
-/*
+
 const getRelatedProductsById = (request, response) => {
   const id = parseInt(request.params.id)
   // TODO: change query to return related products
@@ -150,7 +153,7 @@ const deleteProduct = (request, response) => {
     }
   })
 }
-*/
+
 
 
 // ---------------------------------
