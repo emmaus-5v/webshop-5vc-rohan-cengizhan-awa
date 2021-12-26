@@ -57,7 +57,7 @@ function echoRequest(request, response) {
 function getCategories(request, response) {
   console.log('API ontvangt /api/categories/')
   // TODO: change query to make it return categories
-  const sqlOpdracht = db.prepare('SELECT * FROM products ORDER BY name ASC')
+  const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_id2, brand.name AS brand_name, model.id AS model_id2, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id JOIN product_colour ON products.id = product_colour.products_id JOIN colour ON colour.id = product_colour.colour_id ORDER BY name ASC')
   const data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
@@ -70,10 +70,10 @@ function getProducts(request, response) {
   const category_id = parseInt(request.query.category)
   let data = []
   if (category_id > 0) {
-    const sqlOpdracht = db.prepare('SELECT * FROM products WHERE category_id = ? ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_id2, brand.name AS brand_name, model.id AS model_id2, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id JOIN product_colour ON products.id = product_colour.products_id JOIN colour ON colour.id = product_colour.colour_id ORDER BY name ASC')
     data = sqlOpdracht.all(category_id)
   } else {
-    const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_id2, brand.name AS brand_name, model.id AS model_id2, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id ORDER BY name ASC')
+    const sqlOpdracht = db.prepare('SELECT products.id AS id, products.code AS code, products.name AS name, products.description AS description, products.price AS price, brand.id AS brand_id2, brand.name AS brand_name, model.id AS model_id2, model.name AS model_name FROM products JOIN brand ON products.brand_id = brand.id JOIN model ON products.model_id = model.id JOIN product_colour ON products.id = product_colour.products_id JOIN colour ON colour.id = product_colour.colour_id ORDER BY name ASC')
     data = sqlOpdracht.all()
   }
   // console.log(JSON.stringify(data, null, 2))

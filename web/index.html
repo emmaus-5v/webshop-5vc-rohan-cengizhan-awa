@@ -60,8 +60,9 @@
 					<ul class="product-properties">
 						<li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
 						<li><span class="propert-name">Code:</span><span class="product_code"></span></li>
-						<li><span class="propert-name">Brand:</span><span class="product_brand"></span></li>
+						<li><span class="propert-name">Merk:</span><span class="product_brand"></span></li>
 						<li><span class="propert-name">Model:</span><span class="product_model"></span></li>
+						<li><span class="propert-name">Kleur:</span><span class="product_colour"></span></li>
 					</ul>
 					<input class="product_amount" type="number" value="1" min="1">
 					<input class="product_id" type="hidden" name="id" data-json="">
@@ -128,6 +129,7 @@
               clone.querySelector(".product_code").textContent = product.code
 			  clone.querySelector(".product_brand").textContent = product.brand_name
 			  clone.querySelector(".product_model").textContent = product.model_name
+			  clone.querySelector(".product_colour").textContent = product.colour_name
               clone.querySelector(".product_id").value = product.id
               clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
               clone.querySelector(".product_image").src =`/images/${product.id}.jpg`
